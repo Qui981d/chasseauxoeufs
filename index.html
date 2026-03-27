@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Résolvez les énigmes du Lapin de Pâques et repartez avec des chocolats et des surprises au Centre Commercial La Combe !" />
+  <meta name="theme-color" content="#E31918" />
+  <title>Les Énigmes du Lapin de Pâques — La Combe</title>
+
+
+
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- LANDING PAGE                                                   -->
+  <!-- ============================================================ -->
+  <section id="landing" class="screen active">
+    <div class="landing-bg">
+      <!-- Decorative Easter elements -->
+      <div class="deco-egg deco-egg--1">🥚</div>
+      <div class="deco-egg deco-egg--2">🌷</div>
+      <div class="deco-egg deco-egg--3">🐣</div>
+      <div class="deco-egg deco-egg--4">🌸</div>
+      <div class="deco-egg deco-egg--5">🥚</div>
+      <div class="deco-egg deco-egg--6">🐰</div>
+      <div class="deco-egg deco-egg--7">🌼</div>
+    </div>
+
+    <div class="landing-content">
+      <div class="logo-container" id="logo-container">
+        <img src="/Logo.svg" alt="La Combe" class="logo-img" />
+      </div>
+
+      <div class="landing-badge">
+        <span class="badge-emoji">🐰</span>
+        <span class="badge-label">Chasse aux œufs</span>
+      </div>
+
+      <h1 class="landing-title">
+        Les Énigmes du<br/>
+        <span class="title-highlight">Lapin de Pâques</span>
+      </h1>
+
+      <p class="landing-subtitle">
+        Chaque énigme correspond à un <strong>commerçant</strong> du centre commercial. Trouve la réponse, rends-toi chez le commerçant et récupère ton <strong>chocolat</strong>&nbsp;!
+      </p>
+
+      <div class="landing-steps">
+        <div class="landing-step">
+          <span class="step-number">1</span>
+          <span class="step-text">Résous l'énigme</span>
+        </div>
+        <span class="step-connector"></span>
+        <div class="landing-step">
+          <span class="step-number">2</span>
+          <span class="step-text">Trouve le commerçant</span>
+        </div>
+        <span class="step-connector"></span>
+        <div class="landing-step">
+          <span class="step-number">3</span>
+          <span class="step-text">Récupère ton chocolat&nbsp;🍫</span>
+        </div>
+      </div>
+
+      <button id="btn-start" class="btn btn-primary btn-lg">
+        <span class="btn-icon">🥚</span>
+        Commencer le jeu
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <div class="landing-footer">
+        <p class="landing-hint">Scannez, jouez, gagnez des chocolats&nbsp;!</p>
+        <a href="https://lacombe.ch" target="_blank" class="site-link">lacombe.ch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- REGISTRATION FORM                                              -->
+  <!-- ============================================================ -->
+  <section id="registration" class="screen">
+    <div class="screen-inner">
+      <div class="form-header">
+        <div class="form-icon">🐣</div>
+        <h2 class="form-title">Avant de commencer...</h2>
+        <p class="form-subtitle">Quelques infos pour que le Lapin de Pâques vous connaisse&nbsp;!</p>
+      </div>
+
+      <form id="registration-form" class="form" novalidate>
+        <div class="form-group">
+          <label for="prenom" class="form-label">Prénom</label>
+          <input
+            type="text"
+            id="prenom"
+            name="prenom"
+            class="form-input"
+            placeholder="Votre prénom"
+            required
+            autocomplete="given-name"
+          />
+          <span class="form-error" id="prenom-error">Veuillez entrer votre prénom</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Adresse email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input"
+            placeholder="votre@email.com"
+            required
+            autocomplete="email"
+          />
+          <span class="form-error" id="email-error">Veuillez entrer un email valide</span>
+        </div>
+
+        <div class="form-group">
+          <label for="annee" class="form-label">Année de naissance</label>
+          <input
+            type="number"
+            id="annee"
+            name="annee_naissance"
+            class="form-input"
+            placeholder="1990"
+            min="1920"
+            max="2020"
+            required
+          />
+          <span class="form-error" id="annee-error">Veuillez entrer une année valide</span>
+        </div>
+
+        <div class="form-group form-group--checkbox">
+          <label class="checkbox-label">
+            <input type="checkbox" id="optin" name="optin_newsletter" class="checkbox-input" />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-text">
+              J'accepte de recevoir les offres et actualités de La Combe
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-full">
+          <span class="btn-icon">🎉</span>
+          C'est parti !
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+
+      <p class="form-legal">
+        En participant, vous acceptez notre <a href="/privacy.html" target="_blank" class="legal-link">politique de confidentialité et règlement du jeu</a>.
+      </p>
+      <a href="https://lacombe.ch" target="_blank" class="site-link">lacombe.ch</a>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- GAME / ENIGMES                                                 -->
+  <!-- ============================================================ -->
+  <section id="game" class="screen">
+    <div class="screen-inner">
+      <div class="game-header">
+        <div class="game-logo">
+          <img src="/Logo.svg" alt="La Combe" class="logo-img logo-img--sm" />
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <span class="progress-text" id="progress-text">Énigme 1 / 13</span>
+        </div>
+      </div>
+
+      <div class="enigma-container" id="enigma-container">
+        <!-- Dynamically rendered -->
+      </div>
+
+      <div class="game-footer">
+        <p class="enigma-hint" id="enigma-hint">
+          Tu as trouvé ? Rendez-vous chez le commerçant pour récupérer vos chocolats !
+        </p>
+        <div class="game-nav">
+          <button id="btn-prev" class="btn btn-secondary btn-nav btn-nav--back" aria-label="Précédent">
+            ←
+          </button>
+          <button id="btn-next" class="btn btn-primary btn-nav btn-nav--next">
+            Suivante
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+        <a href="https://lacombe.ch" target="_blank" class="site-link">lacombe.ch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FINAL SCREEN                                                   -->
+  <!-- ============================================================ -->
+  <section id="final" class="screen">
+    <div class="screen-inner final-content">
+      <div class="final-celebration">
+        <div class="confetti-container" id="confetti-container"></div>
+        <div class="final-icon">🎉</div>
+        <h2 class="final-title">Bravo <span id="final-name"></span>&nbsp;!</h2>
+        <p class="final-subtitle">
+          Vous avez terminé toutes les énigmes du Lapin de Pâques&nbsp;!
+        </p>
+      </div>
+
+      <div class="final-footer">
+        <p class="final-thanks">
+          Merci d'avoir participé et joyeuses Pâques&nbsp;! 🐰🌷<br/>
+          À bientôt à La Combe.
+        </p>
+
+        <div class="final-socials">
+          <p class="socials-label">Reste connecté avec La Combe&nbsp;!</p>
+          <div class="socials-links">
+            <a href="https://www.instagram.com/nyonlacombe/" target="_blank" rel="noopener" class="social-btn social-btn--instagram" aria-label="Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/nyonlacombe/" target="_blank" rel="noopener" class="social-btn social-btn--facebook" aria-label="Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+              <span>Facebook</span>
+            </a>
+          </div>
+        </div>
+
+        <button id="btn-restart" class="btn btn-secondary btn-lg">
+          Rejouer
+        </button>
+        <a href="https://lacombe.ch" target="_blank" class="site-link">lacombe.ch</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
